@@ -2,11 +2,11 @@
     gather individual match data.'''
 
 #Imports
-import requests
 import time
+from pprint import pprint
 from selenium import webdriver
 from bs4 import BeautifulSoup
-from pprint import pprint
+import pandas as pd
 
 # Global variables
 MATCH_LIST_URL = "https://www.winstonslab.com/events/event.php?id=86#matches"
@@ -39,12 +39,13 @@ def detailed_match_data(game_id):
 
     # Click button to show the detailed stats
     detail_button = driver.find_element_by_class_name("showDetailedStatsBut")
-    print(detail_button.text)
+    #print(detail_button.text)
     detail_button.click()
     time.sleep(10)
 
     # Create Beautiful Soup object from the div containing the table
     page_source = driver.page_source
+    driver.close()
     new_html = BeautifulSoup(page_source, "lxml")
 
     # Grab just the table
@@ -59,19 +60,32 @@ def detailed_match_data(game_id):
 
     # create a list of headers
     header_elems = table_headers.findAll("th")
-    header_list = []
+    header_list = ["Match ID"]
     for header in header_elems:
         header_list.append(header.text)
+    #pprint(header_list)
     
-    pprint(header_list)
 
     row_list = table_data.findAll("tr")
-    for row in row_list[0:3]:
+    stat_list = []
+    for row in row_list:
+        this_row = [game_id]
         elems = row.findAll("td")
-        print("-----------------------")
+        #print("-----------------------")
         for i, item in enumerate(elems[0:]):
-            print("{}: {}".format(header_list[i], item.text.strip()))
+            this_row.append(item.text.strip())
+            #print("{}: {}".format(header_list[i], item.text.strip()))
+        #print(this_row)
+        stat_list.append(this_row)
+
+    df = pd.DataFrame(stat_list, columns=header_list)
+    #print(df.head())
+
+    return df
 
 
 if __name__ == "__main__":
-    detailed_match_data("2367")
+    df = detailed_match_data("2367")
+    print(df.head())
+    print(df.tail())
+    print(df.shape)
