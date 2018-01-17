@@ -34,13 +34,14 @@ def detailed_match_data(game_id):
     # TODO: Wrap this in a try except clause
     driver = webdriver.Chrome(WEB_DRIVER_LOC)
     driver.get(full_url)
-    time.sleep(5) #This should be replaced with something listening for the page to load
+    time.sleep(10) #This should be replaced with something listening for the page to load
   
-
 
     # Click button to show the detailed stats
     detail_button = driver.find_element_by_class_name("showDetailedStatsBut")
+    print(detail_button.text)
     detail_button.click()
+    time.sleep(10)
 
     # Create Beautiful Soup object from the div containing the table
     page_source = driver.page_source
@@ -61,7 +62,8 @@ def detailed_match_data(game_id):
     header_list = []
     for header in header_elems:
         header_list.append(header.text)
-        pprint(header_list)
+    
+    pprint(header_list)
 
     row_list = table_data.findAll("tr")
     for row in row_list[0:3]:
@@ -69,3 +71,7 @@ def detailed_match_data(game_id):
         print("-----------------------")
         for i, item in enumerate(elems[0:]):
             print("{}: {}".format(header_list[i], item.text.strip()))
+
+
+if __name__ == "__main__":
+    detailed_match_data("2367")
