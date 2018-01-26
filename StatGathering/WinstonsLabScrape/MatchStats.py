@@ -3,18 +3,34 @@
 
 #Imports
 import time
+import requests
+from copy import deepcopy
 from pprint import pprint
 from selenium import webdriver
 from bs4 import BeautifulSoup
+from dateutil.parser import parse
 import pandas as pd
+import logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 # Global variables
 MATCH_LIST_URL = "https://www.winstonslab.com/events/event.php?id=86#matches"
 BASE_MATCH_URL = "https://www.winstonslab.com/matches/match.php"
 WEB_DRIVER_LOC = "/Applications/chromedriver"
+MAP_TYPE_DICT = {
+    "KOTH" : ["Ilios", "Lijiang Tower",
+            "Nepal","Oasis"],
+    "Assault": ["Hanamura", "Horizon Lunar Colony",
+              "Temple of Anubis", "Volskaya Industries"],
+    "Escort" : ["Dorado", "Junkertown",
+             "Route 66", "Watchpoint: Gibraltar"],
+    "Hybrid" : ["Blizzard World", "Eichenwalde",
+             "Hollywood", "King's Row", "Numbani"]
+}
 
 # function for grabbing detailed match data from a particular match
-def detailed_match_data(game_id):
+def get_detailed_match_data(game_id):
     '''
     Gets detailed match stats.
 
@@ -23,7 +39,7 @@ def detailed_match_data(game_id):
             This is the id given to the match by winstons lab.
 
     Returns:
-        String in csv format with headers
+        pandas dataframe
     '''
 
     # Create match url
@@ -82,6 +98,97 @@ def detailed_match_data(game_id):
     #print(df.head())
 
     return df
+
+
+def get_map_summary_data(game_id):
+    '''
+    Gets the date, teams and winner of each map in a given match.
+
+    Args:
+        game_id: str
+            This is the id given to the match by winstons lab.
+
+    Returns:
+        pandas dataframe
+    '''
+
+    # Create match url
+    full_url = "{}?id={}".format(BASE_MATCH_URL, game_id)
+
+    # get html from match page
+    response = requests.get(full_url)
+    html = BeautifulSoup(response.text, "lxml")
+    
+    # build match info shared by all maps
+    map_base = {"Match Id" : game_id}
+    logging.debug("mapbase = {}".format(map_base))
+
+    # get date
+    date_str = html.find("span", {"id": "tzDate_1"}).text
+    date_list = date_str.split(" ")
+    day = date_list[0].split("t")[0]
+    month = date_list[2]
+    year = date_list[3]
+    match_date = parse("{} {} {}".format(day, month, year))
+    map_base["Date"] = match_date.date().isoformat()
+    logging.debug("mapbase = {}".format(map_base))
+
+    # get divs for all other data
+    score_divs = html.find("div", {"class": "mini-map-scores"}).label.findAll("div", recursive=False)
+
+    # set team names
+    team_names = score_divs[0].findAll("div") 
+    map_base["Team A"] = team_names[0].text
+    map_base["Team B"] = team_names[1].text
+    logging.debug("mapbase = {}".format(map_base))
+
+    # get score divs
+    map_scores = score_divs[1:]
+
+    # list to collect map dicts
+    map_dict_list = []
+
+    #loop through maps
+    for m in map_scores:
+        mp = deepcopy(map_base) 
+        
+        map_details = m.findAll("div", recursive=False)
+
+        # Get map name
+        mp["Map Name"] = map_details[0]['title']
+
+        # Get map type
+        for key, val in MAP_TYPE_DICT.items():
+            if mp["Map Name"] in val:
+                mp["Map Type"] = key
+
+        # Get result
+        if 'winner' in map_details[1]["class"]:
+            mp["Winner"] = "Team A"
+        elif 'loser' in map_details[1]["class"]:
+            mp["Winner"] = "Team B"
+        else:
+            mp["Winner"] = "Tie"
+
+        logging.debug("mp={}".format(mp))
+        map_dict_list.append(mp)
+
+
+    return pd.DataFrame.from_records(map_dict_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
