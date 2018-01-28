@@ -1,6 +1,8 @@
 # OWL
 <hr>
+
 ### Purpose:
+
 This repo is for collecting and analyzing data related to Overwatch League.
 
 ## Outline of Goals
