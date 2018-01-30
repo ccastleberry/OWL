@@ -1,0 +1,14 @@
+TEAM_COLOR_DICT = {
+    'LDN': '#78c9e5',
+    'DAL': '#2f72c7',
+    'SHD': '#000000',
+    'SFS': '#e85609',
+    'BOS': '#264b92',
+    'PHI': '#f49d00',
+    'SEO': '#a78a2c',
+    'NYE': '#265ae1',
+    'FLA': '#b50004',
+    'VAL': '#eace00',
+    'HOU': '#a1c861',
+    'GLA': '#6d3eb9'
+}

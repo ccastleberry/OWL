@@ -1,0 +1,10 @@
+MAP_TYPE_DICT = {
+    "KOTH" : ["Ilios", "Lijiang Tower",
+            "Nepal","Oasis"],
+    "Assault": ["Hanamura", "Horizon Lunar Colony",
+              "Temple of Anubis", "Volskaya Industries"],
+    "Escort" : ["Dorado", "Junkertown",
+             "Route 66", "Watchpoint: Gibraltar"],
+    "Hybrid" : ["Blizzard World", "Eichenwalde",
+             "Hollywood", "King's Row", "Numbani"]
+}
