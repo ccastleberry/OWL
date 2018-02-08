@@ -73,7 +73,7 @@ class Match_Results(Base):
     b_fights = Column(Integer)
     a_kills = Column(Integer)
     b_kills = Column(Integer)
-    a_win = Column(Boolean)
+    winning_team_id = Column(String, ForeignKey('team.id'))
     
     def __repr__(self):
         return "<Match_Results (WinstonsLab ID={})>".format(self.wl_match_id)
@@ -81,6 +81,7 @@ class Match_Results(Base):
 class Match_Player_Summary(Base):
     __tablename__ = 'match_player_summary'
     id = Column(Integer, primary_key=True)
+    match_id = Column(Integer, ForeignKey('match_results.id'))
     wl_match_id = Column(Integer)
     date = Column(DateTime)
     player_id = Column(String, ForeignKey('player.id'))
@@ -99,6 +100,7 @@ class Match_Player_Summary(Base):
 class Match_Player_Detail(Base):
     __tablename__ = 'match_player_detail'
     id = Column(Integer, primary_key=True)
+    match_id = Column(Integer, ForeignKey('match_results.id'))
     wl_match_id = Column(Integer)
     date = Column(DateTime)
     player_id = Column(String, ForeignKey('player.id'))
@@ -127,12 +129,92 @@ class Match_Player_Detail(Base):
 
     impact = Column(Integer)
 
+    def __repr__(self):
+        return "<Match Player Detail (WinstonsLab ID={})>".format(self.wl_match_id)
 
+class Round_Results(Base):
+    __tablename__ = 'round_results'
+    id = Column(Integer, primary_key=True)
+    wl_match_id = Column(Integer)
+    match_id = Column(Integer, ForeignKey('match_results.id'))
+    match_round = Column(Integer)
+    map_id = Column(Integer, ForeignKey('map.id'))
 
+    date = Column(DateTime)
+    team_a_id = Column(String, ForeignKey('team.id'))
+    team_b_id = Column(String, ForeignKey('team.id'))
+    a_score = Column(Integer)
+    b_score = Column(Integer)  
+    a_fights = Column(Integer)
+    b_fights = Column(Integer)
+    a_kills = Column(Integer)
+    b_kills = Column(Integer)
+    winning_team_id = Column(String, ForeignKey('team.id'))
+    
+    def __repr__(self):
+        return "<Round Results (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
 
+class Round_Player_Summary(Base):
+    __tablename__ = 'round_player_summary'
+    id = Column(Integer, primary_key=True)
+    wl_match_id = Column(Integer)
+    match_id = Column(Integer, ForeignKey('match_results.id'))
 
+    round_id = Column(Integer, ForeignKey('round_results.id'))
+    map_number = Column(Integer)
+    map_id = Column(Integer, ForeignKey('map.id'))
 
+    date = Column(DateTime)
+    player_id = Column(String, ForeignKey('player.id'))
+    team_id = Column(String, ForeignKey('team.id'))
 
+    kills = Column(Integer)
+    deaths = Column(Integer)
+    kd = Column(Float)
+    ults = Column(Integer)
+    fk_diff = Column(Integer)
+    wl_match_rating = Column(Integer)
 
     def __repr__(self):
-        return "<Match Player Summary (WinstonsLab ID={})>".format(self.wl_match_id)
+        return "<Round Player Summary (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
+
+
+class Round_Player_Detail(Base):
+    __tablename__ = 'match_player_detail'
+    id = Column(Integer, primary_key=True)
+    wl_match_id = Column(Integer)
+    match_id = Column(Integer, ForeignKey('match_results.id'))
+
+    round_id = Column(Integer, ForeignKey('round_results.id'))
+    map_number = Column(Integer)
+    map_id = Column(Integer, ForeignKey('map.id'))
+
+    date = Column(DateTime)
+    player_id = Column(String, ForeignKey('player.id'))
+    hero_id = Column(String, ForeignKey('hero.id'))
+    team_id = Column(String, ForeignKey('team.id'))
+    
+    play_time = Column(DateTime)
+    wl_match_hero_rating = Column(Integer)
+    fight_win_percent = Column(Float)
+    percent_of_teams_kills = Column(Float)
+    
+    kills = Column(Integer)
+    deaths = Column(Integer)
+    ults = Column(Integer)
+    kills_per_10 = Column(Float)
+    deaths_per_10 = Column(Float)
+    ults_per_10 = Column(Float)
+
+    time_to_charge_ult = Column(Integer)
+    kills_per_ult = Column(Integer)
+    ults_efficiency = Column(Float)
+    ults_outside_fight = Column(Float)
+
+    first_kills_percent = Column(Float)
+    first_deaths_percent = Column(Float)
+
+    impact = Column(Integer)
+
+    def __repr__(self):
+        return "<Round Player Detail (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
