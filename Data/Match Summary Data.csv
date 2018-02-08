@@ -1,0 +1,114 @@
+,Date,Map Name,Map Type,Match Id,Team A,Team B,Winner
+0,2018-01-25,Eichenwalde,Hybrid,2419,GLA,VAL,Team A
+1,2018-01-25,Horizon Lunar Colony,Assault,2419,GLA,VAL,Team A
+2,2018-01-25,Ilios,KOTH,2419,GLA,VAL,Team B
+3,2018-01-25,Junkertown,Escort,2419,GLA,VAL,Team B
+4,2018-01-25,Lijiang Tower,KOTH,2419,GLA,VAL,Team B
+0,2018-01-25,Numbani,Hybrid,2418,SHD,SEO,Team B
+1,2018-01-25,Temple of Anubis,Assault,2418,SHD,SEO,Team B
+2,2018-01-25,Oasis,KOTH,2418,SHD,SEO,Team B
+3,2018-01-25,Dorado,Escort,2418,SHD,SEO,Team A
+0,2018-01-25,Eichenwalde,Hybrid,2417,SFS,LDN,Team B
+1,2018-01-25,Horizon Lunar Colony,Assault,2417,SFS,LDN,Team B
+2,2018-01-25,Oasis,KOTH,2417,SFS,LDN,Team A
+3,2018-01-25,Junkertown,Escort,2417,SFS,LDN,Team B
+0,2018-01-20,Dorado,Escort,2416,BOS,SFS,Team B
+1,2018-01-20,Horizon Lunar Colony,Assault,2416,BOS,SFS,Team A
+2,2018-01-20,Oasis,KOTH,2416,BOS,SFS,Team B
+3,2018-01-20,Eichenwalde,Hybrid,2416,BOS,SFS,Team A
+4,2018-01-20,Lijiang Tower,KOTH,2416,BOS,SFS,Team B
+0,2018-01-20,Dorado,Escort,2415,GLA,NYE,Team B
+1,2018-01-20,Horizon Lunar Colony,Assault,2415,GLA,NYE,Team B
+2,2018-01-20,Oasis,KOTH,2415,GLA,NYE,Team B
+3,2018-01-20,Eichenwalde,Hybrid,2415,GLA,NYE,Team B
+0,2018-01-20,Dorado,Escort,2414,VAL,LDN,Team B
+1,2018-01-20,Horizon Lunar Colony,Assault,2414,VAL,LDN,Team B
+2,2018-01-20,Oasis,KOTH,2414,VAL,LDN,Team A
+3,2018-01-20,Eichenwalde,Hybrid,2414,VAL,LDN,Team A
+4,2018-01-20,Lijiang Tower,KOTH,2414,VAL,LDN,Team B
+0,2018-01-20,Junkertown,Escort,2413,LDN,DAL,Team A
+1,2018-01-20,Horizon Lunar Colony,Assault,2413,LDN,DAL,Team A
+2,2018-01-20,Oasis,KOTH,2413,LDN,DAL,Team B
+3,2018-01-20,Numbani,Hybrid,2413,LDN,DAL,Team A
+0,2018-01-20,Dorado,Escort,2412,SHD,FLA,Team B
+1,2018-01-20,Temple of Anubis,Assault,2412,SHD,FLA,Team B
+2,2018-01-20,Ilios,KOTH,2412,SHD,FLA,Team B
+3,2018-01-20,Numbani,Hybrid,2412,SHD,FLA,Team B
+0,2018-01-20,Junkertown,Escort,2411,SEO,BOS,Team A
+1,2018-01-20,Horizon Lunar Colony,Assault,2411,SEO,BOS,Team A
+2,2018-01-20,Oasis,KOTH,2411,SEO,BOS,Team A
+3,2018-01-20,Numbani,Hybrid,2411,SEO,BOS,Team A
+0,2018-01-19,Junkertown,Escort,2410,PHI,GLA,Team A
+1,2018-01-19,Temple of Anubis,Assault,2410,PHI,GLA,Team A
+2,2018-01-19,Ilios,KOTH,2410,PHI,GLA,Team B
+3,2018-01-19,Numbani,Hybrid,2410,PHI,GLA,Team B
+4,2018-01-19,Lijiang Tower,KOTH,2410,PHI,GLA,Team B
+0,2018-01-19,Junkertown,Escort,2409,NYE,VAL,Team A
+1,2018-01-19,Horizon Lunar Colony,Assault,2409,NYE,VAL,Team A
+2,2018-01-19,Oasis,KOTH,2409,NYE,VAL,Team A
+3,2018-01-19,Numbani,Hybrid,2409,NYE,VAL,Tie
+0,2018-01-18,Junkertown,Escort,2408,DAL,HOU,Team B
+1,2018-01-18,Horizon Lunar Colony,Assault,2408,DAL,HOU,Team B
+2,2018-01-18,Oasis,KOTH,2408,DAL,HOU,Team B
+3,2018-01-18,Eichenwalde,Hybrid,2408,DAL,HOU,Team B
+0,2018-01-18,Junkertown,Escort,2407,HOU,SHD,Team A
+1,2018-01-18,Horizon Lunar Colony,Assault,2407,HOU,SHD,Team A
+2,2018-01-18,Oasis,KOTH,2407,HOU,SHD,Team A
+3,2018-01-18,Numbani,Hybrid,2407,HOU,SHD,Team A
+0,2018-01-18,Dorado,Escort,2406,FLA,SEO,Team B
+1,2018-01-18,Horizon Lunar Colony,Assault,2406,FLA,SEO,Team B
+2,2018-01-18,Oasis,KOTH,2406,FLA,SEO,Team B
+3,2018-01-18,Eichenwalde,Hybrid,2406,FLA,SEO,Team B
+0,2018-01-18,Dorado,Escort,2405,SFS,PHI,Team A
+1,2018-01-18,Temple of Anubis,Assault,2405,SFS,PHI,Team B
+2,2018-01-18,Oasis,KOTH,2405,SFS,PHI,Team B
+3,2018-01-18,Eichenwalde,Hybrid,2405,SFS,PHI,Tie
+0,2018-01-13,Junkertown,Escort,2404,SEO,GLA,Team A
+1,2018-01-13,Horizon Lunar Colony,Assault,2404,SEO,GLA,Team A
+2,2018-01-13,Ilios,KOTH,2404,SEO,GLA,Team A
+3,2018-01-13,Numbani,Hybrid,2404,SEO,GLA,Team A
+0,2018-01-13,Junkertown,Escort,2403,NYE,HOU,Team B
+1,2018-01-13,Temple of Anubis,Assault,2403,NYE,HOU,Team A
+2,2018-01-13,Ilios,KOTH,2403,NYE,HOU,Team A
+3,2018-01-13,Numbani,Hybrid,2403,NYE,HOU,Team A
+0,2018-01-13,Junkertown,Escort,2402,LDN,PHI,Team A
+1,2018-01-13,Horizon Lunar Colony,Assault,2402,LDN,PHI,Team A
+2,2018-01-13,Ilios,KOTH,2402,LDN,PHI,Team A
+3,2018-01-13,Numbani,Hybrid,2402,LDN,PHI,Team A
+0,2018-01-13,Junkertown,Escort,2401,SFS,SHD,Team A
+1,2018-01-13,Horizon Lunar Colony,Assault,2401,SFS,SHD,Team B
+2,2018-01-13,Ilios,KOTH,2401,SFS,SHD,Team A
+3,2018-01-13,Numbani,Hybrid,2401,SFS,SHD,Team A
+0,2018-01-13,Dorado,Escort,2400,FLA,BOS,Team B
+1,2018-01-13,Temple of Anubis,Assault,2400,FLA,BOS,Team B
+2,2018-01-13,Oasis,KOTH,2400,FLA,BOS,Team B
+3,2018-01-13,Eichenwalde,Hybrid,2400,FLA,BOS,Team B
+0,2018-01-13,Junkertown,Escort,2399,VAL,DAL,Team A
+1,2018-01-13,Horizon Lunar Colony,Assault,2399,VAL,DAL,Tie
+2,2018-01-13,Ilios,KOTH,2399,VAL,DAL,Team A
+3,2018-01-13,Numbani,Hybrid,2399,VAL,DAL,Team A
+0,2018-01-12,Junkertown,Escort,2383,BOS,NYE,Team B
+1,2018-01-12,Horizon Lunar Colony,Assault,2383,BOS,NYE,Team A
+2,2018-01-12,Ilios,KOTH,2383,BOS,NYE,Team B
+3,2018-01-12,Numbani,Hybrid,2383,BOS,NYE,Team B
+0,2018-01-12,Dorado,Escort,2382,PHI,HOU,Team A
+1,2018-01-12,Horizon Lunar Colony,Assault,2382,PHI,HOU,Team B
+2,2018-01-12,Oasis,KOTH,2382,PHI,HOU,Team A
+3,2018-01-12,Eichenwalde,Hybrid,2382,PHI,HOU,Team B
+4,2018-01-12,Lijiang Tower,KOTH,2382,PHI,HOU,Team A
+0,2018-01-11,Dorado,Escort,2381,LDN,FLA,Team B
+1,2018-01-11,Temple of Anubis,Assault,2381,LDN,FLA,Team A
+2,2018-01-11,Oasis,KOTH,2381,LDN,FLA,Team A
+3,2018-01-11,Numbani,Hybrid,2381,LDN,FLA,Team A
+0,2018-01-11,Junkertown,Escort,2380,DAL,SEO,Team A
+1,2018-01-11,Temple of Anubis,Assault,2380,DAL,SEO,Team B
+2,2018-01-11,Ilios,KOTH,2380,DAL,SEO,Team B
+3,2018-01-11,Numbani,Hybrid,2380,DAL,SEO,Tie
+0,2018-01-11,Dorado,Escort,2379,SHD,GLA,Team B
+1,2018-01-11,Temple of Anubis,Assault,2379,SHD,GLA,Team B
+2,2018-01-11,Ilios,KOTH,2379,SHD,GLA,Team B
+3,2018-01-11,Eichenwalde,Hybrid,2379,SHD,GLA,Team B
+0,2018-01-11,Dorado,Escort,2375,SFS,VAL,Team B
+1,2018-01-11,Temple of Anubis,Assault,2375,SFS,VAL,Team B
+2,2018-01-11,Ilios,KOTH,2375,SFS,VAL,Team B
+3,2018-01-11,Numbani,Hybrid,2375,SFS,VAL,Team B
