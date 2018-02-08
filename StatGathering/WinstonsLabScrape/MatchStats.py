@@ -149,8 +149,9 @@ def get_map_summary_data(game_id):
     map_dict_list = []
 
     #loop through maps
-    for m in map_scores:
-        mp = deepcopy(map_base) 
+    for i, m in enumerate(map_scores):
+        mp = deepcopy(map_base)
+        mp['Map Number'] = i + 1
         
         map_details = m.findAll("div", recursive=False)
 
