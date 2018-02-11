@@ -1,5 +1,5 @@
 ''' This file holds any functions that can be used to
-    gather individual match data.'''
+    scrape raw data from Winston's lab.'''
 
 #Imports
 import time
