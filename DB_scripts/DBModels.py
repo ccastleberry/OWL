@@ -76,9 +76,6 @@ class Map(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     map_type = Column(String)
-
-    def __init__(self, name):
-        self.name = name
     
     def __repr__(self):
         return "<Map (Name={}, Type={})>".format(self.name, self.map_type)
@@ -88,9 +85,6 @@ class Hero(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     hero_type = Column(String)
-
-    def __init__(self, name):
-        self.name = name
     
     def __repr__(self):
         return "<Map (Name={}, Type={})>".format(self.name, self.map_type)
@@ -100,6 +94,8 @@ class Team(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     abbr = Column(String)
+    location = Column(String)
+    division = Column(String)
     
     def __repr__(self):
         return "<Team (name={}, abbr={})>".format(self.name, self.abbr)
