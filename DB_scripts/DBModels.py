@@ -10,20 +10,75 @@ from sqlalchemy import (
     Sequence,
     Float
 )
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy.orm import relationship, backref, Session
 from sqlalchemy.ext.declarative import declarative_base
 
 import datetime
 
 Base = declarative_base()
 
+
+HERO_TYPE_DICT = {'Ana': 'Support',
+ 'Bastion': 'Defense',
+ 'D.Va': 'Tank',
+ 'Doomfist': 'Offense',
+ 'Genji': 'Offense',
+ 'Hanzo': 'Defense',
+ 'Junkrat': 'Defense',
+ 'Lúcio': 'Support',
+ 'McCree': 'Offense',
+ 'Mei': 'Defense',
+ 'Mercy': 'Support',
+ 'Moira': 'Support',
+ 'Orisa': 'Tank',
+ 'Pharah': 'Offense',
+ 'Reaper': 'Offense',
+ 'Reinhardt': 'Tank',
+ 'Roadhog': 'Tank',
+ 'Soldier: 76': 'Offense',
+ 'Sombra': 'Offense',
+ 'Symmetra': 'Support',
+ 'Torbjörn': 'Defense',
+ 'Tracer': 'Offense',
+ 'Widowmaker': 'Defense',
+ 'Winston': 'Tank',
+ 'Zarya': 'Tank',
+ 'Zenyatta': 'Support'}
+
+
+MAP_TYPE_DICT = {'Black Forest': 'Arena',
+ 'Blizzard World': 'Hybrid',
+ 'Castillo': 'Arena',
+ 'Château Guillard': 'Deathmatch',
+ 'Dorado': 'Escort',
+ 'Ecopoint: Antarctica': 'Arena',
+ 'Eichenwalde': 'Hybrid',
+ 'Hanamura': 'Assault',
+ 'Hollywood': 'Hybrid',
+ 'Horizon Lunar Colony': 'Assault',
+ 'Ilios': 'Control',
+ 'Junkertown': 'Escort',
+ "King's Row": 'Hybrid',
+ 'Lijiang Tower': 'Control',
+ 'Necropolis': 'Arena',
+ 'Nepal': 'Control',
+ 'Numbani': 'Hybrid',
+ 'Oasis': 'Control',
+ 'Route 66': 'Escort',
+ 'Temple of Anubis': 'Assault',
+ 'Volskaya Industries': 'Assault',
+ 'Watchpoint: Gibraltar': 'Escort'}
+
 # Table Definitions
 
 class Map(Base):
     __tablename__ = 'map'
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String, nullable=False)
     map_type = Column(String)
+
+    def __init__(self, name):
+        self.name = name
     
     def __repr__(self):
         return "<Map (Name={}, Type={})>".format(self.name, self.map_type)
@@ -33,6 +88,9 @@ class Hero(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     hero_type = Column(String)
+
+    def __init__(self, name):
+        self.name = name
     
     def __repr__(self):
         return "<Map (Name={}, Type={})>".format(self.name, self.map_type)
@@ -178,7 +236,6 @@ class Round_Player_Summary(Base):
     def __repr__(self):
         return "<Round Player Summary (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
 
-
 class Round_Player_Detail(Base):
     __tablename__ = 'match_player_detail'
     id = Column(Integer, primary_key=True)
@@ -218,3 +275,8 @@ class Round_Player_Detail(Base):
 
     def __repr__(self):
         return "<Round Player Detail (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
+
+
+def initialize_db(engine):
+    Base.metadata.create_all(engine)
+
