@@ -1,5 +1,10 @@
-''' This file holds any functions that can be used to
-    scrape raw data from Winston's lab.'''
+''' Collection of functions that scrape the overwatch league site.
+
+Created: 2018-02-04
+Created By: Caleb Castleberry (castle.caleb@gmailcom)
+Last Updated: 2018-02-15
+Updated By: Caleb Castleberry (castle.caleb@gmailcom)
+'''
 
 #Imports
 import time
@@ -11,8 +16,8 @@ from bs4 import BeautifulSoup
 from dateutil.parser import parse
 import pandas as pd
 import logging
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+#logging.basicConfig(level=logging.DEBUG)
+#logger = logging.getLogger(__name__)
 
 # Global variables
 MATCH_LIST_URL = "https://www.winstonslab.com/events/event.php?id=86#matches"
