@@ -163,9 +163,8 @@ def get_player_info():
 
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     #pprint(get_hero_info().head())
     #pprint(get_map_info().head())
     #pprint(get_team_info().head())
     #pprint(get_player_info().head())
-

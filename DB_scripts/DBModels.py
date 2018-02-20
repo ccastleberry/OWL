@@ -108,8 +108,6 @@ class Player(Base):
     last_name = Column(String)
     team_id = Column(Integer, ForeignKey('team.id'))
     # Relationships
-    team = relationship(Team, 
-                        backref=backref('players', uselist=True))
     
     def __repr__(self):
         return "<Player (tag={})>".format(self.tag)
@@ -233,7 +231,7 @@ class Round_Player_Summary(Base):
         return "<Round Player Summary (WinstonsLab ID={}, Map={})>".format(self.wl_match_id, self.map_id)
 
 class Round_Player_Detail(Base):
-    __tablename__ = 'match_player_detail'
+    __tablename__ = 'round_player_detail'
     id = Column(Integer, primary_key=True)
     wl_match_id = Column(Integer)
     match_id = Column(Integer, ForeignKey('match_results.id'))
