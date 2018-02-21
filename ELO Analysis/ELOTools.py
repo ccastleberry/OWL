@@ -67,7 +67,7 @@ def compute_elo_table(df, K=20, elo_start=1000):
     # sort df and get date of first match
     df = df.sort_values(by=['Date', 'Match of the Day'], ascending=True).reset_index(drop=True)
     start_date = df.iloc[0]['Date']
-    start_date = start_date[:-2] + str(int(start_date[-2:])-1)
+    start_date = start_date[:-2] + "{:02}".format(int(start_date[-2:])-1)
 
     # Create list of dicts for initial elo's
     team_elo_start = []
