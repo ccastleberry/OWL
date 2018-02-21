@@ -8,7 +8,7 @@ All functions here should be sport/esport agnostic.
 import pandas as pd
 
 
-
+# Functions for working with
 def get_current_elo(df, team, date):
     df = df[(df["Team"] == team) & (df['Date'] <= date)]
     df = df.sort_values(by=['Date', 'Match Number'], ascending=False).reset_index(drop=True)
@@ -117,7 +117,28 @@ def compute_elo_table(df, K=20, elo_start=1000):
         elo_df = pd.concat([elo_df, temp_df])
     # Return the dataframe sorted by date and match with reset indices
     return elo_df.sort_values(by=['Date', 'Match Number'], ascending=True).reset_index(drop=True)
-        
+
+
+def reindex_elo_by_date(df):
+    #set upo date range
+    start_date = df.sort_values(by=['Date', 'Match Number'], ascending=False).reset_index(drop=True).iloc[0].loc['Date']
+    end_date = df.sort_values(by=['Date', 'Match Number'], ascending=True).reset_index(drop=True).iloc[0].loc['Date']
+    date_range = pd.date_range(start=start_date, end=end_date).strftime('%Y-%m-%d')
+
+    #get unique teams:
+    team_list = df['Team'].unique()
+
+    for team in team_list: 
+        for d in date_range:
+            elo_example = {
+                'Date': d
+                'Match Number': 
+            }
 
 
 
+    return new_df
+
+def update_elo_table(df, elo_a, elo_b, a_win, date, K=20):
+    
+    return new_df
