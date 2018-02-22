@@ -121,24 +121,32 @@ def compute_elo_table(df, K=20, elo_start=1000):
 
 def reindex_elo_by_date(df):
     #set upo date range
-    start_date = df.sort_values(by=['Date', 'Match Number'], ascending=False).reset_index(drop=True).iloc[0].loc['Date']
-    end_date = df.sort_values(by=['Date', 'Match Number'], ascending=True).reset_index(drop=True).iloc[0].loc['Date']
+    start_date = df.sort_values(by=['Date', 'Match Number'], ascending=True).reset_index(drop=True).iloc[0].loc['Date']
+    end_date = df.sort_values(by=['Date', 'Match Number'], ascending=False).reset_index(drop=True).iloc[0].loc['Date']
     date_range = pd.date_range(start=start_date, end=end_date).strftime('%Y-%m-%d')
 
     #get unique teams:
     team_list = df['Team'].unique()
+    #print(team_list)
+    #print(date_range)
+
+    elo_df = pd.DataFrame(columns=['Date', 'Match Number', 'Team', 'Elo'])
 
     for team in team_list: 
         for d in date_range:
             elo_example = {
-                'Date': d
-                'Match Number': 
+                'Date': d,
+                'Match Number': get_current_match_number(df, team, d),
+                'Team': team,
+                'Elo': get_current_elo(df, team,d)
             }
+            temp_df = pd.DataFrame([elo_example])
+
+            elo_df = pd.concat([elo_df, temp_df])
+
+    return elo_df
 
 
-
-    return new_df
-
-def update_elo_table(df, elo_a, elo_b, a_win, date, K=20):
+#def update_elo_table(df, elo_a, elo_b, a_win, date, K=20):
     
-    return new_df
+    #return new_df
