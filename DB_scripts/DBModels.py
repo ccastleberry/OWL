@@ -96,7 +96,7 @@ class Team(Base):
     abbr = Column(String)
     location = Column(String)
     division = Column(String)
-    
+
     def __repr__(self):
         return "<Team (name={}, abbr={})>".format(self.name, self.abbr)
 
@@ -158,7 +158,7 @@ class Match_Player_Detail(Base):
     player_id = Column(String, ForeignKey('player.id'))
     hero_id = Column(String, ForeignKey('hero.id'))
     team_id = Column(String, ForeignKey('team.id'))
-    
+
     play_time = Column(DateTime)
     wl_match_hero_rating = Column(Integer)
     fight_win_percent = Column(Float)

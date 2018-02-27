@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 import matplotlib.pyplot as plt
 
 
@@ -19,7 +19,7 @@ TEAM_COLOR_DICT = {
 }
 
 def plot_elo_by_match(df, title="Elo by Match", figsize=(12,12)):
-    
+
     # Create team list
     team_list = list(df["Team"].unique())
 
