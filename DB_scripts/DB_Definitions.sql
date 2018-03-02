@@ -37,15 +37,14 @@ CREATE TABLE `Player` (
   `Team_Abbr` VARCHAR(10),
   `Country` VARCHAR(60),
   `Hometown` VARCHAR(60),
-  PRIMARY KEY (`Player_ID`),
-  FOREIGN KEY (`Team_ID`) REFERENCES Team(`Team_ID`)
+  PRIMARY KEY (`Player_ID`)
 ) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Match_Results` (
   `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
   `WL_Match_ID` INT UNIQUE NOT NULL,
   `Date` VARCHAR(60),
-  `Round_Time` VARCHAR,
+  `Match_Time` VARCHAR,
 
   `Team_A_ID` INT,
   `Team_A_Name` VARCHAR(60),
@@ -62,10 +61,7 @@ CREATE TABLE `Match_Results` (
   `Winning_Team_ID` INT,
   `Winning_Team_Name` VARCHAR(60),
 
-  PRIMARY KEY (`id`),
-  FOREIGN KEY ('Team_A_ID') REFERENCES Team(id),
-  FOREIGN KEY ('Team_B_ID') REFERENCES Team(id),
-  FOREIGN KEY ('Winning_Team_ID') REFERENCES Team(id)
+   PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
 
 
@@ -86,8 +82,7 @@ CREATE TABLE `Match_Player_Summary` (
     `First_Kill_Differential` INT,
     `WL_Rating` INT,
 
-    PRIMARY KEY (`id`),
-    FOREIGN KEY (`Match_ID`) REFERENCES Match_Results(id),
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
 
 
@@ -119,7 +114,7 @@ CREATE TABLE `Match_Player_Detail` (
     `Kills_Per_Ult` INT,
     `Ult_Efficiency` FLOAT,
     `Ults_Outside_Fight` FLOAT,
-    `First_Kill_Percentage` FLOAT, #Percentage of fights
+    `First_Kill_Percentage` FLOAT,
     `First_Death_Percentage` FLOAT,
 
     `WL_Impact` INT,
@@ -134,6 +129,7 @@ CREATE TABLE `Round_Results` (
   `Match_Round` INT NOT NULL,
   `Map_ID` INT NOT NULL,
   `Map_Name` VARCHAR(60) NOT NULL,
+  `Map_Type` VARCHAR(60),
   `Date` VARCHAR(60),
   `Round_Time` VARCHAR,
 
@@ -152,10 +148,75 @@ CREATE TABLE `Round_Results` (
   `Winning_Team_ID` INT,
   `Winning_Team_Name` VARCHAR(60),
 
-  PRIMARY KEY (`id`),
-  FOREIGN KEY ('Team_A_ID') REFERENCES Team(id),
-  FOREIGN KEY ('Team_B_ID') REFERENCES Team(id),
-  FOREIGN KEY ('Winning_Team_ID') REFERENCES Team(id)
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `Round_Player_Summary` (
+    `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+    `Match_ID` INT NOT NULL,
+    `WL_Match_ID` INT UNIQUE NOT NULL,
+    `Match_Round` INT,
+    `Round_ID` INT,
+    `Map_ID` INT NOT NULL,
+    `Map_Name` VARCHAR(60) NOT NULL,
+    `Map_Type` VARCHAR(60),
+    `Date` VARCHAR(60),
+    `Player_ID` INT,
+    `Player_Tag` VALUES(60),
+    `Team_ID` INT,
+    `Team_Name` VARCHAR(60)
+
+    `Kills` INT,
+    `Deaths` INT,
+    `KD` INT,
+    `Ults` INT,
+    `First_Kill_Differential` INT,
+    `WL_Rating` INT,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `Round_Player_Detail` (
+    `id` INT NOT NULL UNIQUE AUTO_INCREMENT,
+    `Match_ID` INT NOT NULL,
+    `WL_Match_ID` INT,
+    `Match_Round` INT,
+    `Round_ID` INT,
+    `Map_ID` INT NOT NULL,
+    `Map_Name` VARCHAR(60) NOT NULL,
+    `Map_Type` VARCHAR(60),D
+    `Date` VARCHAR(60),
+    `Player_ID` INT NOT NULL,
+    `Player_Tag` VARCHAR(60)
+    `Hero_ID` INT NOT NULL,
+    `Hero Name` VARCHAR(60) NOT NULL,
+    `Team_ID` INT NOT NULL,
+    `Team_Name` VARCHAR(60) NOT NULL,
+
+    `Play_Time` VARCHAR(60),
+    `WL_Match_Hero_Rating` INT,
+    `Fight_Win_Percentage` FLOAT,
+    `Percentage_Team_Kills` FLOAT,
+
+    `Kills` INT,
+    `Deaths` INT,
+    `Ults` INT,
+    `Kills_Per_10` FLOAT,
+    `Deaths_Per_10` FLOAT,
+    `Ults_Per_10` FLOAT,
+
+    `Time_To_Charge_Ult` INT,
+    `Kills_Per_Ult` INT,
+    `Ult_Efficiency` FLOAT,
+    `Ults_Outside_Fight` FLOAT,
+    `First_Kill_Percentage` FLOAT, #Percentage of fights
+    `First_Death_Percentage` FLOAT,
+
+    `WL_Impact` INT,
+
+    PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
 
 

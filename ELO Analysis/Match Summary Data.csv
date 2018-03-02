@@ -1,4 +1,54 @@
 ,Date,Map Name,Map Number,Map Type,Match Id,Team A,Team B,Winner
+0,2018-02-25,Hanamura,1,Assault,2460,SHD,VAL,Tie
+1,2018-02-25,Lijiang Tower,2,KOTH,2460,SHD,VAL,Team B
+2,2018-02-25,King's Row,3,Hybrid,2460,SHD,VAL,Team B
+3,2018-02-25,Watchpoint: Gibraltar,4,Escort,2460,SHD,VAL,Team B
+0,2018-02-24,Hanamura,1,Assault,2459,BOS,HOU,Team B
+1,2018-02-24,Lijiang Tower,2,KOTH,2459,BOS,HOU,Team B
+2,2018-02-24,King's Row,3,Hybrid,2459,BOS,HOU,Team B
+3,2018-02-24,Watchpoint: Gibraltar,4,Escort,2459,BOS,HOU,Team B
+0,2018-02-24,Hanamura,1,Assault,2458,PHI,FLA,Team A
+1,2018-02-24,Nepal,2,KOTH,2458,PHI,FLA,Team A
+2,2018-02-24,Hollywood,3,Hybrid,2458,PHI,FLA,Team A
+3,2018-02-24,Watchpoint: Gibraltar,4,Escort,2458,PHI,FLA,Team A
+0,2018-02-24,Hanamura,1,Assault,2457,SFS,SEO,Team A
+1,2018-02-24,Lijiang Tower,2,KOTH,2457,SFS,SEO,Team B
+2,2018-02-24,Hollywood,3,Hybrid,2457,SFS,SEO,Team B
+3,2018-02-24,Watchpoint: Gibraltar,4,Escort,2457,SFS,SEO,Team B
+0,2018-02-24,Hanamura,1,Assault,2456,DAL,GLA,Team A
+1,2018-02-24,Lijiang Tower,2,KOTH,2456,DAL,GLA,Team B
+2,2018-02-24,King's Row,3,Hybrid,2456,DAL,GLA,Team A
+3,2018-02-24,Watchpoint: Gibraltar,4,Escort,2456,DAL,GLA,Team A
+0,2018-02-24,Volskaya Industries,1,Assault,2455,LDN,NYE,Team A
+1,2018-02-24,Lijiang Tower,2,KOTH,2455,LDN,NYE,Team B
+2,2018-02-24,King's Row,3,Hybrid,2455,LDN,NYE,Team B
+3,2018-02-24,Watchpoint: Gibraltar,4,Escort,2455,LDN,NYE,Team A
+4,2018-02-24,Ilios,5,KOTH,2455,LDN,NYE,Team A
+0,2018-02-23,Hanamura,1,Assault,2388,BOS,PHI,Team B
+1,2018-02-23,Lijiang Tower,2,KOTH,2388,BOS,PHI,Team B
+2,2018-02-23,Hollywood,3,Hybrid,2388,BOS,PHI,Team B
+3,2018-02-23,Watchpoint: Gibraltar,4,Escort,2388,BOS,PHI,Team B
+0,2018-02-23,Hanamura,1,Assault,2387,NYE,FLA,Team A
+1,2018-02-23,Lijiang Tower,2,KOTH,2387,NYE,FLA,Team B
+2,2018-02-23,King's Row,3,Hybrid,2387,NYE,FLA,Team A
+3,2018-02-23,Watchpoint: Gibraltar,4,Escort,2387,NYE,FLA,Team A
+0,2018-02-23,Volskaya Industries,1,Assault,2386,HOU,LDN,Team B
+1,2018-02-23,Nepal,2,KOTH,2386,HOU,LDN,Team A
+2,2018-02-23,King's Row,3,Hybrid,2386,HOU,LDN,Team A
+3,2018-02-23,Route 66,4,Escort,2386,HOU,LDN,Team B
+4,2018-02-23,Ilios,5,KOTH,2386,HOU,LDN,Team A
+0,2018-02-22,Hanamura,1,Assault,2385,GLA,SFS,Team A
+1,2018-02-22,Nepal,2,KOTH,2385,GLA,SFS,Team A
+2,2018-02-22,King's Row,3,Hybrid,2385,GLA,SFS,Team A
+3,2018-02-22,Watchpoint: Gibraltar,4,Escort,2385,GLA,SFS,Team A
+0,2018-02-22,Volskaya Industries,1,Assault,2384,DAL,SHD,Team A
+1,2018-02-22,Nepal,2,KOTH,2384,DAL,SHD,Team A
+2,2018-02-22,Hollywood,3,Hybrid,2384,DAL,SHD,Team B
+3,2018-02-22,Route 66,4,Escort,2384,DAL,SHD,Team A
+0,2018-02-22,Volskaya Industries,1,Assault,2376,SEO,VAL,Team A
+1,2018-02-22,Nepal,2,KOTH,2376,SEO,VAL,Team A
+2,2018-02-22,King's Row,3,Hybrid,2376,SEO,VAL,Team A
+3,2018-02-22,Route 66,4,Escort,2376,SEO,VAL,Team A
 0,2018-02-11,Junkertown,1,Escort,2454,NYE,LDN,Team A
 1,2018-02-11,Oasis,2,KOTH,2454,NYE,LDN,Team A
 2,2018-02-11,Horizon Lunar Colony,3,Assault,2454,NYE,LDN,Team B
