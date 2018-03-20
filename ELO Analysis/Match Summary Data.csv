@@ -1,4 +1,53 @@
 ,Date,Map Name,Map Number,Map Type,Match Id,Team A,Team B,Winner
+0,2018-03-04,Hanamura,1,Assault,2472,SHD,SFS,Team B
+1,2018-03-04,Nepal,2,KOTH,2472,SHD,SFS,Team B
+2,2018-03-04,King's Row,3,Hybrid,2472,SHD,SFS,Team B
+3,2018-03-04,Watchpoint: Gibraltar,4,Escort,2472,SHD,SFS,Team B
+0,2018-03-03,Volskaya Industries,1,Assault,2471,HOU,NYE,Team B
+1,2018-03-03,Lijiang Tower,2,KOTH,2471,HOU,NYE,Team B
+2,2018-03-03,King's Row,3,Hybrid,2471,HOU,NYE,Team B
+3,2018-03-03,Route 66,4,Escort,2471,HOU,NYE,Team B
+0,2018-03-03,Hanamura,1,Assault,2470,PHI,LDN,Team B
+1,2018-03-03,Nepal,2,KOTH,2470,PHI,LDN,Team B
+2,2018-03-03,Hollywood,3,Hybrid,2470,PHI,LDN,Team B
+3,2018-03-03,Route 66,4,Escort,2470,PHI,LDN,Team B
+0,2018-03-03,Hanamura,1,Assault,2469,DAL,VAL,Team B
+1,2018-03-03,Nepal,2,KOTH,2469,DAL,VAL,Team B
+2,2018-03-03,Hollywood,3,Hybrid,2469,DAL,VAL,Team B
+3,2018-03-03,Watchpoint: Gibraltar,4,Escort,2469,DAL,VAL,Team A
+0,2018-03-03,Hanamura,1,Assault,2468,GLA,SEO,Team B
+1,2018-03-03,Nepal,2,KOTH,2468,GLA,SEO,Team A
+2,2018-03-03,Hollywood,3,Hybrid,2468,GLA,SEO,Team B
+3,2018-03-03,Watchpoint: Gibraltar,4,Escort,2468,GLA,SEO,Team B
+0,2018-03-03,Volskaya Industries,1,Assault,2467,BOS,FLA,Team A
+1,2018-03-03,Lijiang Tower,2,KOTH,2467,BOS,FLA,Team A
+2,2018-03-03,Hollywood,3,Hybrid,2467,BOS,FLA,Team A
+3,2018-03-03,Route 66,4,Escort,2467,BOS,FLA,Team A
+0,2018-03-02,Hanamura,1,Assault,2466,NYE,BOS,Team A
+1,2018-03-02,Nepal,2,KOTH,2466,NYE,BOS,Team A
+2,2018-03-02,King's Row,3,Hybrid,2466,NYE,BOS,Team A
+3,2018-03-02,Watchpoint: Gibraltar,4,Escort,2466,NYE,BOS,Team A
+0,2018-03-02,Volskaya Industries,1,Assault,2465,HOU,PHI,Team A
+1,2018-03-02,Nepal,2,KOTH,2465,HOU,PHI,Team A
+2,2018-03-02,Hollywood,3,Hybrid,2465,HOU,PHI,Team B
+3,2018-03-02,Route 66,4,Escort,2465,HOU,PHI,Team B
+4,2018-03-02,Ilios,5,KOTH,2465,HOU,PHI,Team B
+0,2018-03-02,Volskaya Industries,1,Assault,2464,FLA,LDN,Team A
+1,2018-03-02,Lijiang Tower,2,KOTH,2464,FLA,LDN,Team B
+2,2018-03-02,King's Row,3,Hybrid,2464,FLA,LDN,Team B
+3,2018-03-02,Route 66,4,Escort,2464,FLA,LDN,Team B
+0,2018-03-01,Volskaya Industries,1,Assault,2463,GLA,SHD,Team A
+1,2018-03-01,Nepal,2,KOTH,2463,GLA,SHD,Team A
+2,2018-03-01,King's Row,3,Hybrid,2463,GLA,SHD,Team A
+3,2018-03-01,Route 66,4,Escort,2463,GLA,SHD,Team A
+0,2018-03-01,Volskaya Industries,1,Assault,2462,VAL,SFS,Team B
+1,2018-03-01,Lijiang Tower,2,KOTH,2462,VAL,SFS,Team A
+2,2018-03-01,King's Row,3,Hybrid,2462,VAL,SFS,Team A
+3,2018-03-01,Watchpoint: Gibraltar,4,Escort,2462,VAL,SFS,Team A
+0,2018-03-01,Hanamura,1,Assault,2461,SEO,DAL,Team A
+1,2018-03-01,Nepal,2,KOTH,2461,SEO,DAL,Team A
+2,2018-03-01,Hollywood,3,Hybrid,2461,SEO,DAL,Team B
+3,2018-03-01,Route 66,4,Escort,2461,SEO,DAL,Team A
 0,2018-02-25,Hanamura,1,Assault,2460,SHD,VAL,Tie
 1,2018-02-25,Lijiang Tower,2,KOTH,2460,SHD,VAL,Team B
 2,2018-02-25,King's Row,3,Hybrid,2460,SHD,VAL,Team B
